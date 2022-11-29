@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Expanded version of the a02 galoshes app, translating its functionality to a web server with API endpoints and linking it to a database",
   "main": "server.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "test": "node server.js --port=5555",
     "start": "node server.js"
