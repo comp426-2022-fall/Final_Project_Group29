@@ -27,6 +27,24 @@ app.get('/app/weather/', (req, res, next) => {
     weather_retrieve(35.875,-79,moment.tz.guess(),1);
 });
 
+// Retrieves data with specified longitude and latitude
+app.get('/app/weather/:latitude/:longitude', (req, res, next) => {
+    res.status(200);
+    weather_retrieve(req.params.latitude,req.params.longitude,moment.tz.guess(),1);
+});
+
+// Retrieves data with specified longitude, latitude, and timezone
+app.get('/app/weather/:latitude/:longitude/:timezone', (req, res, next) => {
+    res.status(200);
+    weather_retrieve(req.params.latitude,req.params.longitude,req.params.timezone,1);
+});
+
+// Retrieves data with specified longitude, latitude, and timezone
+app.get('/app/weather/:latitude/:longitude/:timezone/:day', (req, res, next) => {
+    res.status(200);
+    weather_retrieve(req.params.latitude,req.params.longitude,req.params.timezone,req.params.day);
+});
+
 // Returns error if a nonexistant endpoint is used
 app.get('*', (req, res, next) => {
     res.status(404);
