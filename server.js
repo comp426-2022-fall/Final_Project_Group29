@@ -22,27 +22,33 @@ app.get('/app/', (req, res, next) => {
 });
 
 // Retrieves weather data with default values
-app.get('/app/weather/', (req, res, next) => {
+app.get('/app/weather/', async (req, res, next) => {
     res.status(200);
-    weather_retrieve(35.875,-79,moment.tz.guess(),1);
+    let weather = await weather_retrieve(35.875,-79,moment.tz.guess(),1);
+    res.send(weather);
 });
 
 // Retrieves data with specified longitude and latitude
-app.get('/app/weather/:latitude/:longitude', (req, res, next) => {
+app.get('/app/weather/:latitude/:longitude', async (req, res, next) => {
     res.status(200);
-    weather_retrieve(req.params.latitude,req.params.longitude,moment.tz.guess(),1);
+    let weather = await weather_retrieve(req.params.latitude,req.params.longitude,moment.tz.guess(),1);
+    res.send(weather);
 });
 
 // Retrieves data with specified longitude, latitude, and timezone
-app.get('/app/weather/:latitude/:longitude/:timezone', (req, res, next) => {
+app.get('/app/weather/:latitude/:longitude/:country/:city', async (req, res, next) => {
     res.status(200);
-    weather_retrieve(req.params.latitude,req.params.longitude,req.params.timezone,1);
+    let timezone = req.params.country + "/" + req.params.city;
+    let weather = await weather_retrieve(req.params.latitude,req.params.longitude,timezone,1);
+    res.send(weather);
 });
 
-// Retrieves data with specified longitude, latitude, and timezone
-app.get('/app/weather/:latitude/:longitude/:timezone/:day', (req, res, next) => {
+// Retrieves data with specified longitude, latitude, timezone, and day
+app.get('/app/weather/:latitude/:longitude/:country/:city/:day', async (req, res, next) => {
     res.status(200);
-    weather_retrieve(req.params.latitude,req.params.longitude,req.params.timezone,req.params.day);
+    let timezone = req.params.country + "/" + req.params.city;
+    let weather = await weather_retrieve(req.params.latitude,req.params.longitude,timezone,req.params.day);
+    res.send(weather);
 });
 
 // Returns error if a nonexistant endpoint is used
@@ -67,18 +73,20 @@ async function weather_retrieve(latitude, longitude, timezone, day) {
     const data = await response.json();
 
     // Get days argument and concat appropriate messages
+    let message = "";
     if (data.daily.precipitation_hours[day] > 0) {
-        process.stdout.write("You might need your galoshes ");
+        message += "You might need your galoshes ";
     }
     else {
-        process.stdout.write("You probably won't need your galoshes ")
+        message += "You probably won't need your galoshes ";
     }
 
     if (day == 0) {
-    console.log("today.");
+        message += "today.";
     } else if (day > 1) {
-    console.log("in " + day + " days.");
+        message += "in " + day + " days.";
     } else {
-    console.log("tomorrow.");
+        message += "tomorrow.";
     }
+    return message;
 }
