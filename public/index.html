@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Comp 426 Final Project</title>
+</head>
+<body>
+<div class="container">
+    <h1>Real-time Weather Forecast</h1>
+    <form>
+        <div class="form-control">
+            <input
+                    class="Latitude"
+                    id="Latitude"
+                    type="Latitude"
+                    value=""
+                    onkeyup="this.setAttribute('value', this.value);"
+                    oninput = "value=value.replace(/^\D*(\d*(?:\.\d{0,6})?).*$/g, '$1')"
+            />
+            <label id="lati_label" for="Latitude">Latitude</label>
+        </div>
+        <div class="form-control">
+            <input
+                    id="Longitude"
+                    type="Longitude"
+                    value=""
+                    onkeyup="this.setAttribute('value', this.value);"
+                    oninput = "value=value.replace(/^\D*(\d*(?:\.\d{0,6})?).*$/g, '$1')"
+            />
+            <label for="Longitude">Longitude</label>
+        </div>
+        <div class="form-control">
+            <input
+                    id="City"
+                    type="City"
+                    value=""
+                    onkeyup="this.setAttribute('value', this.value);"
+            />
+            <label for="City">City</label>
+        </div>
+        <div class="form-control">
+            <span class="text">Date</span>
+            <input
+                    id="date"
+                    type="date"
+                    value=""
+            />
+        </div>
+        <div class="form-control">
+        <button type="submit" class="btn">Search</button>
+        <p class="text">This is the weather: <span class="text" id="result_box"></span></p>
+        </div>
+    </form>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
