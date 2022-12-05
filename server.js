@@ -89,5 +89,5 @@ async function weather_retrieve(latitude, longitude, timezone, day) {
     } else {
         message += "tomorrow.";
     }
-    return message;
+    return message + "<br/><br/>Full weather data:<br/>" + JSON.stringify(data);
 }
