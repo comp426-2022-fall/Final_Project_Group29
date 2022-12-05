@@ -11,7 +11,7 @@ This is a collaborative project by calebbg, libinhang, and CodingPineapple22. Th
 Endpoint design, documentation - calebbg\
 Front-end design, repository management - libinhang\
 Database design, walkthrough presentation - CodingPineapple22\
-Planning - All\
+Planning - All
 
 Further planning details can be found in this repository in /docs/planning.txt
 
