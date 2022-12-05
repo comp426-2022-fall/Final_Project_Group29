@@ -6,6 +6,11 @@ Team final project
 ## Summary 
 
 For our project, we used the Open Meteo API to show the weather of a pariticular region, given its Longitude and Latitude.
+To begin, go to http://localhost:5500/app/weather
+to see the defaulted result of whether or not you need galoshes in New York. 
+You can specify the latitude and longitude values as so: http://localhost:5500/app/weather/##/## 
+You can also add arguments for the region, city, and the number of days you would like to know about.
+
 
 COMP426 final project template boilerplate.
 All your code and documentation goes here.
