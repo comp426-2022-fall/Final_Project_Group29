@@ -9,8 +9,11 @@ For our project, we created an API which retrieves data from the Open Meteo API 
 This is a collaborative project by calebbg, libinhang, and CodingPineapple22. The roles focused on by each team member are as follows:
 
 Endpoint design, documentation - calebbg
+
 Front-end design, repository management - libinhang
+
 Database design, walkthrough presentation - CodingPineapple22
+
 Planning - All
 
 Further planning details can be found in this repository in /docs/planning.txt
