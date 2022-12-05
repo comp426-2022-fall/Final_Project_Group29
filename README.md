@@ -5,6 +5,8 @@ Team final project
 
 ## Summary 
 
+For our project, we used the Open Meteo API to show the weather of a pariticular region, given its Longitude and Latitude.
+
 COMP426 final project template boilerplate.
 All your code and documentation goes here.
 Change this text to be a brief description of your final project.
