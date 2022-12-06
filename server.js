@@ -18,7 +18,7 @@ const port = args.port || 5000;
 // Root endpoint
 app.get('/app/', (req, res, next) => {
     res.status(200);
-    res.send("Status code : 200 OK");
+    res.send("Status code : 200 OK. <br/><br/>Add /weather to url to run weather app with default values. <br/><br/>To specify arguments, add them to the url in the following format (replace each word with desired value): /latitude/longitude/country/city/num_of_days");
 });
 
 // Retrieves weather data with default values
@@ -60,6 +60,7 @@ app.get('*', (req, res, next) => {
 // Tells server to listen on the correct port
 app.listen(port, () => {
     console.log("Server is listening on port " + port);
+    console.log("Go to http:/localhost:" + port + "/app to interact with server");
 });
 
 async function weather_retrieve(latitude, longitude, timezone, day) {
@@ -88,5 +89,5 @@ async function weather_retrieve(latitude, longitude, timezone, day) {
     } else {
         message += "tomorrow.";
     }
-    return message;
+    return message + "<br/><br/>Full weather data:<br/>" + JSON.stringify(data);
 }

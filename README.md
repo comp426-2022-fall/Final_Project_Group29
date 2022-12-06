@@ -1,7 +1,4 @@
-# Group 29 COMP 426 Final Project
-Team final project 
-
-** (just copying the template for now, will change this later): **
+# Group 29 COMP 426 Final Project - Weather API Server
 
 ## Summary 
 
@@ -36,28 +33,19 @@ Other steps that you will need to take after your team has accepted the assignme
 
 Plan to meet with your team ASAP.
 Talk through identifying roles within your team.
+For our project, we created an API which retrieves data from the Open Meteo API to show the weather of a pariticular region on a certain day, given its longitude and latitude. Our goal was to create an application which facilitates the interaction between two APIs, one of our own design which the user interacts with and an existing one which data is retrieved from based on the user's request.
 
-Try to figure out what each of you are good at/enjoy doing and try to work out roles that incorporate that.
 
-Some basic roles you will want to consider:
+## Team management
+This is a collaborative project by calebbg, libinhang, and CodingPineapple22. The roles focused on by each team member are as follows:
 
-1. A review manager - someone to review pull requests and merge or reject them and manage the related discussions
-2. A plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date
-3. A documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented
-4. A release manager - someone to manage the packaging and release process for your prototype package
-5. A project manager - someone keeping track of all the moving parts and make sure that everything that needs to happen is happening.
-5. Roles for team members to take charge or different parts of the project. Possible roles:
-    1. Front end lead
-    2. Back end lead
-    3. Database lead
-    4. Design lead
-    5. Etc.
+Endpoint design, documentation - calebbg\
+Front-end design, repository management - libinhang\
+Database design, walkthrough presentation - CodingPineapple22\
+Planning - All
 
-You will notice that there are more roles than people in your group.
-That is because you will all be doing a hybrid job of managing a thing while working on other things.
+Further planning details can be found in this repository in /docs/planning.txt
 
-## Assignment instructions
 
-And that is about all you need to get started.
+## Functionality
 
-Good skill and be creative!
