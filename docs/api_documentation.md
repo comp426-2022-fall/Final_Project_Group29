@@ -86,3 +86,9 @@ Expected browser output:
 ```
 404 NOT FOUND
 ```
+
+## Front-end implementation
+*fill this in*
+
+## Database implementation
+To be determined
