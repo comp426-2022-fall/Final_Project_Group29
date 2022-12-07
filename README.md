@@ -19,7 +19,7 @@ Further planning details can be found in this repository in /docs/planning
 ## Functionality
 To begin, download the repository and run ```npm install``` in the command-line. This will install each dependency needed for running the application. 
 
-Executing ```node server.js``` will run the server on a default port (5000), or you can specify a specific port using ```--port=[number]```. Once the server is up, going to http://localhost:5000/app/ will present the default page for the app, which includes instructions on how to retrieve the weather data you desire.
+Executing ```node server.js``` will run the server on a default port (5000), or you can specify a specific port using ```--port=[number]```. Once the server is up, going to http://localhost:5000/app/ in your browser will present the default page for the app, which includes instructions on how to retrieve the weather data you desire.
 
 Going to http://localhost:5000/app/weather/ will retrieve weather data from Open Mateo using default values for latitude, longitude, timezone and day. The webpage will display whether you need galoshes based on the data and will print out the data it retrieved.\
 You can specify the latitude and longitude values as so: http://localhost:5000/app/weather/##/##.
