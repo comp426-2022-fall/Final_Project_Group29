@@ -5,6 +5,10 @@ import minimist from 'minimist';
 import moment from 'moment-timezone';
 import fetch from 'node-fetch';
 import express from 'express';
+import path from 'path'
+
+//Getting the dir name using path
+const __dirname = path.resolve();
 
 // Creating an Express server object 
 const app = express();
@@ -14,6 +18,12 @@ const args = minimist(process.argv.slice(2));
 
 // Sets port number based on argument or defaults to 5000
 const port = args.port || 5000;
+
+// Sending files in public folder to the page
+app.use(express.static(__dirname + "/public"));
+app.get('/', (req, res, next) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 // Root endpoint
 app.get('/app/', (req, res, next) => {
@@ -60,6 +70,7 @@ app.get('*', (req, res, next) => {
 // Tells server to listen on the correct port
 app.listen(port, () => {
     console.log("Server is listening on port " + port);
+    console.log("Go to http://localhost:" + port + "/app to interact with server");
 });
 
 async function weather_retrieve(latitude, longitude, timezone, day) {
