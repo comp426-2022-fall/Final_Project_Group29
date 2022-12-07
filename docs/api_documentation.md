@@ -79,10 +79,10 @@ Full weather data:
 {"latitude":39,"longitude":-27,"generationtime_ms":0.4010200500488281,"utc_offset_seconds":3600,"timezone":"Europe/Berlin","timezone_abbreviation":"CET","elevation":0,"current_weather":{"temperature":15.3,"windspeed":52.7,"winddirection":334,"weathercode":2,"time":"2022-12-07T05:00"},"daily_units":{"time":"iso8601","precipitation_hours":"h"},"daily":{"time":["2022-12-07","2022-12-08","2022-12-09","2022-12-10","2022-12-11","2022-12-12","2022-12-13"],"precipitation_hours":[24,16,11,10,0,0,0]}}
 ```
 
-**'/\*/'**
+**'/\*/'**\
 This endpoint catches when the user puts an invalid url path in, returning an error.
 Example url: ```http:/localhost:5500/app/wrong```\
 Expected browser output:
-'''
+```
 404 NOT FOUND
-'''
+```
