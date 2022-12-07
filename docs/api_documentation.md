@@ -1,4 +1,5 @@
 ## Dependencies
+Run ```npm install``` in command-line to install the following dependencies:
 - Express (4.18.2): used for creation of server for API
 - Minimist (1.2.7): used for parsing port argument from command-line
 - Moment-timezone (0.5.39): used for guessing user timezone as default value
