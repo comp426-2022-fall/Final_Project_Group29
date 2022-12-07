@@ -13,7 +13,7 @@ Front-end design, repository management - libinhang\
 Database design, walkthrough presentation - CodingPineapple22\
 Planning - All
 
-Further planning details can be found in this repository in /docs/planning
+Further planning details can be found in this repository in /docs/planning.md
 
 
 ## Functionality
@@ -25,4 +25,4 @@ Going to http://localhost:[PORT_NUMBER]/app/weather/ will retrieve weather data 
 You can specify the latitude and longitude values as so: http://localhost:[PORT_NUMBER]/app/weather/##/##.
 You can also add arguments for the region, city, and the number of days from now you would like to know about.
 
-Full specifications for endpoints and dependecies can be found in /docs/api_documentation
+Full specifications for endpoints and dependecies can be found in /docs/api_documentation.md
