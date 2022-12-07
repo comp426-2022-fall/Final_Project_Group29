@@ -13,7 +13,7 @@ Front-end design, repository management - libinhang\
 Database design, walkthrough presentation - CodingPineapple22\
 Planning - All
 
-Further planning details can be found in this repository in /docs/planning.txt
+Further planning details can be found in this repository in /docs/planning
 
 
 ## Functionality
@@ -25,4 +25,4 @@ Going to http://localhost:5000/app/weather/ will retrieve weather data from Open
 You can specify the latitude and longitude values as so: http://localhost:5000/app/weather/##/##.
 You can also add arguments for the region, city, and the number of days from now you would like to know about.
 
-Full specifications for endpoints and dependecies can be found in /docs/api_documentation.txt
+Full specifications for endpoints and dependecies can be found in /docs/api_documentation
