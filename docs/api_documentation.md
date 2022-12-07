@@ -80,7 +80,7 @@ Full weather data:
 ```
 
 **'/\*/'**\
-This endpoint catches when the user puts an invalid url path in, returning an error.
+This endpoint catches when the user puts an invalid url path in, returning an error.\
 Example url: ```http:/localhost:5500/app/wrong```\
 Expected browser output:
 ```
