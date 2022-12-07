@@ -15,7 +15,7 @@ const args = minimist(process.argv.slice(2));
 // Sets port number based on argument or defaults to 5000
 const port = args.port || 5000;
 
-// Root endpoint
+// Root endpoint, indicates that the app is running and provides instructions for further use
 app.get('/app/', (req, res, next) => {
     res.status(200);
     res.send("Status code : 200 OK. <br/><br/>Add /weather to url to run weather app with default values. <br/><br/>To specify arguments, add them to the url in the following format (replace each word with desired value): /latitude/longitude/country/city/num_of_days");
