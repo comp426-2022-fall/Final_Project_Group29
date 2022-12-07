@@ -16,5 +16,5 @@ of a local function and server endpoints similar to A04 in order to use and pres
 - Discussed the functionality that had been implemented and refined aspects of the presentation (notably making instructions clearer within the application)
 - Discussed how front-end and database could be implemented, as well as how to handle what we aren't able to finish
 
-Communication between meetings was done through Discussions board in Github (https://github.com/orgs/comp426-2022-fall/teams/group-29/discussions)\
-Current and future tasks were managed through a to-do list in Projects (https://github.com/orgs/comp426-2022-fall/projects/12)
+Communication between meetings was done through Discussions board in Github (https://github.com/orgs/comp426-2022-fall/teams/group-29/discussions).
+Current tasks were managed through a to-do list in Projects (https://github.com/orgs/comp426-2022-fall/projects/12).
