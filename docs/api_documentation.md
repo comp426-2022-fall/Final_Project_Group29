@@ -88,7 +88,8 @@ Expected browser output:
 ```
 
 ## Front-end implementation
-*Partially implemented*\
+*Partially implemented*
+
 Intended function is for the user to be able to enter latitude, longitude, timezone, and day into a HTML form inside the browser. The appropriate data would be retrieved from Open Mateo and the corresponding endpoint would be triggered, returning the desired data at the bottom of the form. 
 
 For now, going to ```http://localhost:[PORT_NUMBER]/``` gives a preview of what that form would look like. An example image of this can be found in the /docs/ folder of this repository.
