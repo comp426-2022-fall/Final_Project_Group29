@@ -60,7 +60,7 @@ app.get('*', (req, res, next) => {
 // Tells server to listen on the correct port
 app.listen(port, () => {
     console.log("Server is listening on port " + port);
-    console.log("Go to http:/localhost:" + port + "/app to interact with server");
+    console.log("Go to http://localhost:" + port + "/app to interact with server");
 });
 
 async function weather_retrieve(latitude, longitude, timezone, day) {
