@@ -1,56 +1,28 @@
-# Group 29 COMP 426 Final Project
-Team final project 
-
-** (just copying the template for now, will change this later): **
+# Group 29 COMP 426 Final Project - Weather API Server
 
 ## Summary 
 
-COMP426 final project template boilerplate.
-All your code and documentation goes here.
-Change this text to be a brief description of your final project.
-Put the name of your project in the header above.
-You will change everything below to be the main technical documentation, as outlined below.
+For our project, we created an API which retrieves data from the Open Meteo API to show the weather of a pariticular region on a certain day, given its longitude and latitude. Our goal was to create an application which facilitates the interaction between two APIs, one of our own design which the user interacts with and an existing one which data is retrieved from based on the user's request.
 
-## First steps
 
-Other steps that you will need to take after your team has accepted the assignment:
+## Team management
+This is a collaborative project by calebbg, libinhang, and CodingPineapple22. The roles focused on by each team member are as follows:
 
-1. Choose a license and update the LICENSE file accordingly. 
-2. Edit this README.md file and use it as the main location of your technical documentation with links out to information contained under `/docs/`.
-3. Create a `/docs/` directory for more elaborate documentation of your API, planning notes, etc.
-4. Make sure that all of your team members have access to the repository as administrators.
-5. Create a project under the **Projects** tab. Use this to manage your planning. Create a To-do list, etc. Explore the tools available and user them to manage your project.
-7. Assign team roles and include a listing of those roles in this README.md file or in another file under `/docs/`.
-8. Then put your entire development workflow in this repository.
-9. Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
-10. Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
+Endpoint design, documentation - calebbg\
+Front-end design, repository management - libinhang\
+Database design, walkthrough presentation - CodingPineapple22\
+Planning - All
 
-## Team mangement
+Further planning details can be found in this repository in /docs/planning
 
-Plan to meet with your team ASAP.
-Talk through identifying roles within your team.
 
-Try to figure out what each of you are good at/enjoy doing and try to work out roles that incorporate that.
+## Functionality
+To begin, download the repository and run ```npm install``` in the command-line. This will install each dependency needed for running the application. 
 
-Some basic roles you will want to consider:
+Executing ```node server.js``` will run the server on a default port (5000), or you can specify a specific port using ```--port=[number]```. Once the server is up, going to http://localhost:[PORT_NUMBER]/app/ in your browser will present the default page for the app, which includes instructions on how to retrieve the weather data you desire.
 
-1. A review manager - someone to review pull requests and merge or reject them and manage the related discussions
-2. A plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date
-3. A documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented
-4. A release manager - someone to manage the packaging and release process for your prototype package
-5. A project manager - someone keeping track of all the moving parts and make sure that everything that needs to happen is happening.
-5. Roles for team members to take charge or different parts of the project. Possible roles:
-    1. Front end lead
-    2. Back end lead
-    3. Database lead
-    4. Design lead
-    5. Etc.
+Going to http://localhost:[PORT_NUMBER]/app/weather/ will retrieve weather data from Open Mateo using default values for latitude, longitude, timezone and day. The webpage will display whether you need galoshes based on the data and will print out the data it retrieved.\
+You can specify the latitude and longitude values as so: http://localhost:[PORT_NUMBER]/app/weather/##/##.
+You can also add arguments for the region, city, and the number of days from now you would like to know about.
 
-You will notice that there are more roles than people in your group.
-That is because you will all be doing a hybrid job of managing a thing while working on other things.
-
-## Assignment instructions
-
-And that is about all you need to get started.
-
-Good skill and be creative!
+Full specifications for endpoints and dependecies can be found in /docs/api_documentation

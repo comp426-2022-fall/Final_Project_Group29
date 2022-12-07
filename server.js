@@ -10,7 +10,7 @@ import path from 'path'
 //Getting the dir name using path
 const __dirname = path.resolve();
 
-// Creating an Express server object 
+// Creating an Express server object
 const app = express();
 
 // Reading in command line arguments
@@ -19,16 +19,17 @@ const args = minimist(process.argv.slice(2));
 // Sets port number based on argument or defaults to 5000
 const port = args.port || 5000;
 
+
 // Sending files in public folder to the page
 app.use(express.static(__dirname + "/public"));
 app.get('/', (req, res, next) => {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-// Root endpoint
+// Root endpoint, indicates that the app is running and provides instructions for further use
 app.get('/app/', (req, res, next) => {
     res.status(200);
-    res.send("Status code : 200 OK");
+    res.send("Status code : 200 OK. <br/><br/>Add /weather to url to run weather app with default values. <br/><br/>To specify arguments, add them to the url in the following format (replace each word with desired value): /latitude/longitude/country/city/num_of_days");
 });
 
 // Retrieves weather data with default values
@@ -99,5 +100,5 @@ async function weather_retrieve(latitude, longitude, timezone, day) {
     } else {
         message += "tomorrow.";
     }
-    return message;
+    return message + "<br/><br/>Full weather data:<br/>" + JSON.stringify(data);
 }
