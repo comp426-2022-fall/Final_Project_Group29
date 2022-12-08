@@ -87,14 +87,16 @@ Expected browser output:
 404 NOT FOUND
 ```
 
-## Front-end implementation
+## Front-end design
 *Partially implemented*
 
-Intended function is for the user to be able to enter latitude, longitude, timezone, and day into a HTML form inside the browser. The appropriate data would be retrieved from Open Mateo and the corresponding endpoint would be triggered, returning the desired data at the bottom of the form. 
+The planned functionality is for the user to be able to enter latitude, longitude, timezone, and day into an HTML form inside the browser. The appropriate data would be retrieved from Open Mateo and the corresponding endpoint would be triggered, returning the desired data at the bottom of the form. 
 
-For now, going to ```http://localhost:[PORT_NUMBER]/``` gives a preview of what that form would look like. An example image of this can be found in the /docs/ folder of this repository.
+For now, going to ```http://localhost:[PORT_NUMBER]/``` gives a preview of what that form would look like. An example image of this can be found in the /docs/ folder of this repository, and the full code can be found in the /public/ folder.
 
-## Database implementation
-*Not yet implemented*
+## Database design
+*Partially implemented*
 
 The planned functionality of databases would involve two tables. One table would store the weather data that is retrieved by the user after each API call, keeping track of what has been requested and successfully received. Another table would store access logs, keeping track of users visiting the site anonymously for security reasons. All of this data would be stored and accessed via SQL queries, utilizing a JavaScript and Node compatible SQL library such as better-sqlite3.
+
+For now, there is a CRUD interface provided in the /crudOperations/ folder which can be used to store a list of data requests. An example image can be found in the /docs/ folder of this repository.
