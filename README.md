@@ -16,7 +16,7 @@ Planning - All
 Further planning details can be found in this repository in /docs/planning.md
 
 
-## Functionality
+## Instructions/Functionality
 To begin, download the repository and run ```npm install``` in the command-line. This will install each dependency needed for running the application. 
 
 Executing ```node server.js``` will run the server on a default port (5000), or you can specify a specific port using ```--port=[number]```. Once the server is up, going to http://localhost:[PORT_NUMBER]/app/ in your browser will present the default page for the app, which includes instructions on how to retrieve the weather data you desire.
