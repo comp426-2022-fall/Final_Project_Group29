@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CRUD for Galosh API Queries</title>
+    <link type="text/css" rel="stylesheet" href="crudStyle.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="queryCreate()">
+                    <!--4 table colums: longitude, latitude, timezone,days-->
+                    <div>
+                        <label for="longitude">Longitude</label>
+                        <input type="text" name="longitude" id="longitude">
+                    </div>
+                    <div>
+                        <label for="latitude">Latitude</label>
+                        <input type="text" name="latitude" id="latitude">
+                    </div>
+                    <div>
+                        <label for="timezone">Timezone</label>
+                        <input type="text" name="timezone" id="timezone">
+                    </div>
+                    <div>
+                        <label for="days">Days</label>
+                        <input type="number" name="days" id="days">
+                    </div>
+                    <!--add button for adding query, and resetting search boxes-->
+                    <div class="create_and_clear">
+                        <input type="submit" value="Create">
+                        <input type="reset" value="Clear">
+                    </div>
+                </form>
+                <!--create another table for keeping a catalog of queries-->
+                <td>
+                    <table class="list" id="inputList">
+                        <thread>
+                            <tr>
+                                <th>Longitude</th>
+                                <th>Latitude</th>
+                                <th>Timezone</th>
+                                <th>Days</th>
+                            </tr>
+                        </thread>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./crudMain.js"></script>
+</body>
+</html>
